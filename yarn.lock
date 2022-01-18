@@ -102,7 +102,7 @@
   dependencies:
     esbuild "^0.13.15"
 
-"@sveltejs/adapter-netlify@1.0.0-next.39":
+"@sveltejs/adapter-netlify@1.0.0-next.39", "@sveltejs/adapter-netlify@^1.0.0-next.39":
   version "1.0.0-next.39"
   resolved "https://registry.yarnpkg.com/@sveltejs/adapter-netlify/-/adapter-netlify-1.0.0-next.39.tgz#a352270430b29fb3df6cdc5370ee2d94761c79bf"
   integrity sha512-uBRscFmse2PkRZzIbRkG2sUNSIUveliiWFWUkIvxClfsT9x7JxVHgr1zsBwbIdrWs4EE7PvTAlUnv2wlEBEijQ==
