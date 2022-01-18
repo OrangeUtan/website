@@ -9,6 +9,6 @@
 {#each Object.entries($hatsRegistry) as [category, hats]}
 	<h2>{category.trim().replace(/^\w/, (c) => c.toUpperCase())}</h2>
 	{#each Object.entries(hats) as [id, hat]}
-		<img src={`images/hats/icons/${id}.png`} alt="" />
+		<img src={`images/hats/icons/${id}.png`} alt="" loading="lazy" />
 	{/each}
 {/each}
