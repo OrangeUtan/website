@@ -2,7 +2,7 @@ import { writable } from 'svelte/store';
 import type { Writable } from 'svelte/store';
 import yaml from 'js-yaml';
 
-interface Hat {
+export interface Hat {
 	cmd: number;
 	lore?: Array<string>;
 }
