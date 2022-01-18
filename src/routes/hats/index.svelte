@@ -46,7 +46,7 @@
 	<h2 class="text-2xl text-center p-4">
 		{category.trim().replace(/^\w/, (c) => c.toUpperCase())}
 	</h2>
-	<div class="grid gap-4 lg:grid-cols-5 md:grid-cols-4  grid-cols-2">
+	<div class="grid gap-4 lg:grid-cols-7 md:grid-cols-5 grid-cols-3">
 		{#each Object.entries(hats) as [id, hat]}
 			<HatCard {id} {hat} />
 		{/each}

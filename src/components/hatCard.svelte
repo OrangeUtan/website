@@ -15,9 +15,9 @@
 </script>
 
 <a
-	class="p-6 bg-gray-100 text-gray-800 text-center rounded-md shadow-sm hover:shadow-md flex flex-col items-center"
+	class="p-4 bg-gray-100 text-gray-800 text-center rounded-md shadow-sm hover:shadow-md flex flex-col items-center"
 	href=""
 >
-	<img class="h-28 w-28" src={`images/hats/icons/${id}.png`} alt={id} loading="lazy" />
+	<img class="h-16 w-16" src={`images/hats/icons/${id}.png`} alt={id} loading="lazy" />
 	<h2 class="">{capitalizeWords(id.replace(/_/g, ' '))}</h2>
 </a>
