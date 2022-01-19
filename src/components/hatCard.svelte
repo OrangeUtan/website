@@ -18,6 +18,6 @@
 	class="p-4 bg-gray-100 text-gray-800 text-center rounded-md shadow-sm hover:shadow-md flex flex-col items-center"
 	href=""
 >
-	<img class="h-16 w-16" src={`images/hats/icons/${id}.png`} alt={id} loading="lazy" />
+	<i class={`h-18 w-18 icon-${id}`} />
 	<h2 class="">{capitalizeWords(id.replace(/_/g, ' '))}</h2>
 </a>

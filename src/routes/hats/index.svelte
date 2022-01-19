@@ -31,6 +31,7 @@
 
 <svelte:head>
 	<title>Hats Datapack</title>
+	<link rel="stylesheet" href="/static/images/hats/spritesheets/icons.css" />
 </svelte:head>
 
 <h1 class="text-4xl text-center my-8 uppercase">Hats Datapack</h1>
