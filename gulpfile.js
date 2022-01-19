@@ -9,7 +9,8 @@ gulp.task('spritesheets', function () {
 	var spriteData = gulp.src('static/images/hats/icons/*.png').pipe(
 		spritesmith({
 			imgName: 'icons.png',
-			cssName: 'icons.css'
+			cssName: 'icons.css',
+			imgPath: '/images/hats/spritesheets/icons.png'
 		})
 	);
 

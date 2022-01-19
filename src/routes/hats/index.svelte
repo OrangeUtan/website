@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { hatsRegistry } from '../../stores/hats';
 	import HatCard from '../../components/hatCard.svelte';
-	import { identity } from 'svelte/internal';
 
 	let searchTerm = '';
 	let filteredRegistry = {};
