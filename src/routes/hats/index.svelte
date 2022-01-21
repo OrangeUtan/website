@@ -1,23 +1,27 @@
 <script lang="ts">
 	import { categories } from '../../stores/hats';
+	import type { Hat } from '../../stores/hats';
+	import { language } from '../../stores/language';
 	import HatCard from '../../components/hatCard.svelte';
 
 	let searchTerm = '';
 	let filteredCategories = $categories;
 
+	function hatMatchesSearchTerm(searchTerm: string, hat: Hat) {
+		return (
+			$language[hat.name]?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+			hat.type.toLowerCase().includes(searchTerm.toLowerCase()) ||
+			String(hat.cmd).includes(searchTerm)
+		);
+	}
+
 	$: if (searchTerm) {
 		filteredCategories = Object.fromEntries(
 			Object.entries($categories)
 				.map(([category, hats]) => {
-					return [
-						category,
-						hats.filter((hat) => {
-							hat.type.toLowerCase().includes(searchTerm.toLowerCase()) ||
-								String(hat.cmd).includes(searchTerm);
-						})
-					];
+					return [category, hats.filter((hat) => hatMatchesSearchTerm(searchTerm, hat))];
 				})
-				.filter(([category, hats]) => {
+				.filter(([_, hats]) => {
 					return Object.keys(hats).length > 0;
 				})
 		);
@@ -40,12 +44,12 @@
 	bind:value={searchTerm}
 />
 
-{#each Object.entries(filteredCategories) as [category, hats]}
+{#each Object.entries(filteredCategories) as [category, hats] (category)}
 	<h2 class="text-2xl text-center p-4">
 		{category.trim().replace(/^\w/, (c) => c.toUpperCase())}
 	</h2>
 	<div class="grid gap-4 lg:grid-cols-7 md:grid-cols-5 grid-cols-3">
-		{#each hats as hat}
+		{#each hats as hat (hat.type)}
 			<HatCard {hat} />
 		{/each}
 	</div>

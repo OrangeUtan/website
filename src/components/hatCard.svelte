@@ -1,16 +1,8 @@
 <script lang="ts">
 	import type { Hat } from '../stores/hats';
+	import { language } from '../stores/language';
 
 	export let hat: Hat;
-
-	function capitalizeWords(s: string) {
-		const words = s.split(' ');
-		return words
-			.map((word) => {
-				return word[0].toUpperCase() + word.substring(1);
-			})
-			.join(' ');
-	}
 </script>
 
 <a
@@ -18,5 +10,5 @@
 	href=""
 >
 	<i class={`h-18 w-18 icon-${hat.type}`} />
-	<h2 class="">{capitalizeWords(hat.type.replace(/_/g, ' '))}</h2>
+	<h2 class="">{$language[hat.name]}</h2>
 </a>

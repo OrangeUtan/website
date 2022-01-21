@@ -8,7 +8,7 @@ interface HatJson {
 	additional_nbt?: Record<string, unknown>;
 }
 
-interface Hat {
+export interface Hat {
 	type: string;
 	cmd: number;
 	name: string;
