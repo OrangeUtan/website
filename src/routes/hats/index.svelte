@@ -1,30 +1,28 @@
 <script lang="ts">
-	import { hatsByCategory } from '../../stores/hats';
+	import { categories } from '../../stores/hats';
 	import HatCard from '../../components/hatCard.svelte';
 
 	let searchTerm = '';
-	let filteredHats = $hatsByCategory;
+	let filteredCategories = $categories;
 
 	$: if (searchTerm) {
-		filteredHats = Object.fromEntries(
-			Object.entries($hatsByCategory)
+		filteredCategories = Object.fromEntries(
+			Object.entries($categories)
 				.map(([category, hats]) => {
-					hats = Object.fromEntries(
-						Object.entries(hats).filter(([id, hat]) => {
-							return (
-								id.toLowerCase().includes(searchTerm.toLowerCase()) ||
-								String(hat.cmd).includes(searchTerm)
-							);
+					return [
+						category,
+						hats.filter((hat) => {
+							hat.type.toLowerCase().includes(searchTerm.toLowerCase()) ||
+								String(hat.cmd).includes(searchTerm);
 						})
-					);
-					return [category, hats];
+					];
 				})
 				.filter(([category, hats]) => {
 					return Object.keys(hats).length > 0;
 				})
 		);
 	} else {
-		filteredHats = $hatsByCategory;
+		filteredCategories = $categories;
 	}
 </script>
 
@@ -42,7 +40,7 @@
 	bind:value={searchTerm}
 />
 
-{#each Object.entries(filteredHats) as [category, hats]}
+{#each Object.entries(filteredCategories) as [category, hats]}
 	<h2 class="text-2xl text-center p-4">
 		{category.trim().replace(/^\w/, (c) => c.toUpperCase())}
 	</h2>
