@@ -3,6 +3,7 @@
 	import type { Hat } from '../../stores/hats';
 	import { language } from '../../stores/language';
 	import HatCard from '../../components/hatCard.svelte';
+	import { Circle3 } from 'svelte-loading-spinners';
 
 	let searchTerm = '';
 	let filteredCategories = $categories;
@@ -52,5 +53,9 @@
 		{#each hats as hat (hat.type)}
 			<HatCard {hat} />
 		{/each}
+	</div>
+{:else}
+	<div class="flex justify-center items-center p-8">
+		<Circle3 />
 	</div>
 {/each}
