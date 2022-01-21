@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { hatsRegistry } from '../../stores/hats';
+	import { hatsByCategory } from '../../stores/hats';
 	import HatCard from '../../components/hatCard.svelte';
 
 	let searchTerm = '';
-	let filteredRegistry = {};
+	let filteredHats = $hatsByCategory;
 
 	$: if (searchTerm) {
-		filteredRegistry = Object.fromEntries(
-			Object.entries($hatsRegistry)
+		filteredHats = Object.fromEntries(
+			Object.entries($hatsByCategory)
 				.map(([category, hats]) => {
 					hats = Object.fromEntries(
 						Object.entries(hats).filter(([id, hat]) => {
@@ -24,7 +24,7 @@
 				})
 		);
 	} else {
-		filteredRegistry = $hatsRegistry;
+		filteredHats = $hatsByCategory;
 	}
 </script>
 
@@ -42,13 +42,13 @@
 	bind:value={searchTerm}
 />
 
-{#each Object.entries(filteredRegistry) as [category, hats]}
+{#each Object.entries(filteredHats) as [category, hats]}
 	<h2 class="text-2xl text-center p-4">
 		{category.trim().replace(/^\w/, (c) => c.toUpperCase())}
 	</h2>
 	<div class="grid gap-4 lg:grid-cols-7 md:grid-cols-5 grid-cols-3">
-		{#each Object.entries(hats) as [id, hat]}
-			<HatCard {id} {hat} />
+		{#each hats as hat}
+			<HatCard {hat} />
 		{/each}
 	</div>
 {/each}

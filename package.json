@@ -38,7 +38,5 @@
 		"vinyl-buffer": "^1.0.1"
 	},
 	"type": "module",
-	"dependencies": {
-		"js-yaml": "^4.1.0"
-	}
+	"dependencies": {}
 }
