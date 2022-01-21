@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { categories } from '../../stores/hats';
-	import type { Hat } from '../../stores/hats';
-	import { language } from '../../stores/language';
-	import HatCard from '../../components/hatCard.svelte';
+	import { categories } from '../../lib/stores/hats';
+	import type { Hat } from '../../lib/stores/hats';
+	import { language } from '../../lib/stores/language';
+	import HatCard from '../../lib/components/hatCard.svelte';
 	import { Circle3 } from 'svelte-loading-spinners';
 
 	let searchTerm = '';
