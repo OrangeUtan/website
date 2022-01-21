@@ -10,10 +10,10 @@ export interface Hat {
 
 export const hatsByCategory: Writable<Record<string, Array<Hat>>> = writable({});
 
-const fetchHatsRegistry = async () => {
+const fetchHatsByCategory = async () => {
 	const url = 'https://orangeutan.github.io/Hats/api/hats_by_category.json';
 	const res = await fetch(url);
 	hatsByCategory.set(await res.json());
 };
 
-fetchHatsRegistry();
+fetchHatsByCategory();
