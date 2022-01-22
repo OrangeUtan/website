@@ -6,11 +6,11 @@ import csso from 'gulp-csso';
 import merge from 'merge-stream';
 
 gulp.task('spritesheets', function () {
-	var spriteData = gulp.src('static/images/hats/icons/*.png').pipe(
+	var spriteData = gulp.src('static/i/icon/*.png').pipe(
 		spritesmith({
-			imgName: 'icons.png',
-			cssName: 'icons.css',
-			imgPath: '/images/hats/spritesheets/icons.png'
+			imgName: 'hatIcons.png',
+			cssName: 'hatIcons.css',
+			imgPath: '/i/hatIcons.png'
 		})
 	);
 
@@ -19,10 +19,10 @@ gulp.task('spritesheets', function () {
 		// DEV: We must buffer our stream into a Buffer for `imagemin`
 		.pipe(buffer())
 		.pipe(imagemin())
-		.pipe(gulp.dest('static/images/hats/spritesheets/'));
+		.pipe(gulp.dest('static/i/'));
 
 	// Pipe CSS stream through CSS optimizer and onto disk
-	var cssStream = spriteData.css.pipe(csso()).pipe(gulp.dest('static/images/hats/spritesheets/'));
+	var cssStream = spriteData.css.pipe(csso()).pipe(gulp.dest('static/i/'));
 
 	return merge(imgStream, cssStream);
 });
