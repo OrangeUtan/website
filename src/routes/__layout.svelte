@@ -7,8 +7,8 @@
 	<link rel="icon" type="image/x-icon" href="/i/favicon.png" />
 </svelte:head>
 
+<Nav />
 <div class="p-8 max-w-6xl mx-auto">
-	<Nav />
 	<slot />
 </div>
 
