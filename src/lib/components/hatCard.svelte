@@ -5,10 +5,17 @@
 	export let hat: Hat;
 </script>
 
-<a
-	class="p-4 bg-gray-100 text-gray-800 text-center rounded-md shadow-sm hover:shadow-md flex flex-col items-center"
-	href=""
+<div
+	class="border border-solid border-gray-200 text-gray-800 rounded-md shadow-sm hover:shadow-md flex flex-col items-center"
 >
-	<i class={`h-18 w-18 hat-icon h-${hat.type}`} />
-	<h2 class="">{$language[hat.name]}</h2>
-</a>
+	<i class={`hat-icon h-${hat.type}`} />
+	<div class="bg-gray-100 w-full text-center flex-grow">
+		<p class="">{$language[hat.name]}</p>
+	</div>
+</div>
+
+<style>
+	p {
+		padding: 0.5rem 1rem;
+	}
+</style>
