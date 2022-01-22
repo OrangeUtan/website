@@ -10,7 +10,13 @@ gulp.task('spritesheets', function () {
 		spritesmith({
 			imgName: 'hatIcons.png',
 			cssName: 'hatIcons.css',
-			imgPath: '/i/hatIcons.png'
+			imgPath: '/i/hatIcons.png',
+			cssTemplate: 'src/spritesheet.template.handlebars',
+			cssHandlebarsHelpers: {
+				percentage: function (value, total) {
+					return value / total;
+				}
+			}
 		})
 	);
 

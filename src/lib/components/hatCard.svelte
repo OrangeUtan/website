@@ -9,6 +9,6 @@
 	class="p-4 bg-gray-100 text-gray-800 text-center rounded-md shadow-sm hover:shadow-md flex flex-col items-center"
 	href=""
 >
-	<i class={`h-18 w-18 icon-${hat.type}`} />
+	<i class={`h-18 w-18 hat-icon h-${hat.type}`} />
 	<h2 class="">{$language[hat.name]}</h2>
 </a>
