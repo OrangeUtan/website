@@ -32,7 +32,6 @@
 </script>
 
 <svelte:head>
-	<title>Hats Datapack</title>
 	<link rel="stylesheet" href="/i/hatIcons.css" />
 </svelte:head>
 
