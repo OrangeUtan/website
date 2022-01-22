@@ -43,7 +43,7 @@
 />
 
 {#each Object.entries(filteredCategories) as [category, hats] (category)}
-	<h1 class="text-2xl text-center p-4">
+	<h1 class="text-2xl text-left pt-4 pb-4 ">
 		{category.trim().replace(/^\w/, (c) => c.toUpperCase())}
 	</h1>
 	<div class="grid gap-6 lg:grid-cols-7 md:grid-cols-5 grid-cols-3">
