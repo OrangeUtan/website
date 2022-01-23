@@ -10,7 +10,8 @@ module.exports = {
 			card: 'var(--color-card)',
 			'on-card': 'var(--color-on-card)',
 			'border-card': 'var(--color-border-card)',
-			border: 'var(--color-border)'
+			border: 'var(--color-border)',
+			'theme-toggle': 'var(--color-theme-toggle)'
 		},
 		transitionDuration: {
 			theme: 'var(--duration-theme)'

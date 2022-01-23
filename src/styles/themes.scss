@@ -8,6 +8,7 @@
 	--color-on-card: var(--color-on-bg);
 	--color-border-card: #e0dddd;
 	--color-border: #373e47;
+	--color-theme-toggle: #f5d67b;
 }
 
 :global[data-theme='dark'] {
@@ -19,4 +20,5 @@
 	--color-on-card: #bebebe;
 	--color-border-card: #383e49;
 	--color-border: #373e47;
+	--color-theme-toggle: #9ed5ef;
 }
