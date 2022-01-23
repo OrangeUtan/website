@@ -7,10 +7,13 @@
 	<link rel="icon" type="image/x-icon" href="/i/favicon.png" />
 </svelte:head>
 
-<Nav />
-<div class="p-8 max-w-6xl mx-auto">
+<header>
+	<Nav />
+</header>
+
+<main class="p-8 max-w-6xl mx-auto">
 	<slot />
-</div>
+</main>
 
 <style>
 	@tailwind base;
