@@ -1,8 +1,11 @@
 <script lang="ts">
 	function toggleTheme() {
 		dark = !dark;
-		const theme = dark ? 'dark' : 'light';
-		document.documentElement.setAttribute('data-theme', theme);
+		if (dark) {
+			document.documentElement.dataset.theme = 'dark';
+		} else {
+			delete document.documentElement.dataset.theme;
+		}
 	}
 
 	let dark = false;
