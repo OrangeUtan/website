@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@nanostores/persistent': ^0.5.1
   '@sveltejs/adapter-auto': 1.0.0-next.11
   '@sveltejs/adapter-netlify': 1.0.0-next.39
   '@sveltejs/kit': 1.0.0-next.232
@@ -15,6 +16,7 @@ specifiers:
   gulp-imagemin: ^8.0.0
   gulp.spritesmith: ^6.12.1
   merge-stream: ^2.0.0
+  nanostores: ^0.5.8
   prettier: ^2.4.1
   prettier-plugin-svelte: ^2.4.0
   sass: ^1.49.0
@@ -28,6 +30,7 @@ specifiers:
   vinyl-buffer: ^1.0.1
 
 devDependencies:
+  '@nanostores/persistent': 0.5.1_nanostores@0.5.8
   '@sveltejs/adapter-auto': 1.0.0-next.11
   '@sveltejs/adapter-netlify': 1.0.0-next.39
   '@sveltejs/kit': 1.0.0-next.232_sass@1.49.0+svelte@3.46.2
@@ -42,6 +45,7 @@ devDependencies:
   gulp-imagemin: 8.0.0_gulp@4.0.2
   gulp.spritesmith: 6.12.1
   merge-stream: 2.0.0
+  nanostores: 0.5.8
   prettier: 2.5.1
   prettier-plugin-svelte: 2.6.0_prettier@2.5.1+svelte@3.46.2
   sass: 1.49.0
@@ -117,6 +121,15 @@ packages:
 
   /@iarna/toml/2.2.5:
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
+    dev: true
+
+  /@nanostores/persistent/0.5.1_nanostores@0.5.8:
+    resolution: {integrity: sha512-LtumEEbDtnsDi2P+/ewtBEAsCOCXYbTVHN/8xtxomoE2wXGvkp6+N3dW2RhLyKDIc7rfRZpqpPe+LMjpqh6Ijg==}
+    engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
+    peerDependencies:
+      nanostores: ^0.5.0
+    dependencies:
+      nanostores: 0.5.8
     dev: true
 
   /@nodelib/fs.scandir/2.1.5:
@@ -3802,6 +3815,11 @@ packages:
       regex-not: 1.0.2
       snapdragon: 0.8.2
       to-regex: 3.0.2
+    dev: true
+
+  /nanostores/0.5.8:
+    resolution: {integrity: sha512-syNUBiyorm4olP6TBs7HQg0/ICT58Np2awUC7/cR+o85WdyQe7JUdNORWuPonj0GQovjJdKDZmC2w0D/HIOMwA==}
+    engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
     dev: true
 
   /natural-compare/1.4.0:

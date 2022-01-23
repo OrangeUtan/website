@@ -1,5 +1,13 @@
 <script lang="ts">
 	import Nav from '$lib/components/nav.svelte';
+	import { theme } from '$stores/theme';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		if ($theme) {
+			document.documentElement.dataset.theme = $theme;
+		}
+	});
 </script>
 
 <svelte:head>

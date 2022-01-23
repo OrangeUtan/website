@@ -1,18 +1,18 @@
 <script lang="ts">
+	import { theme } from '$stores/theme';
+
 	function toggleTheme() {
-		dark = !dark;
-		if (dark) {
-			document.documentElement.dataset.theme = 'dark';
-		} else {
-			delete document.documentElement.dataset.theme;
-		}
+		const newTheme = $theme == 'dark' ? 'light' : 'dark';
+		theme.set(newTheme);
+		document.documentElement.dataset.theme = newTheme;
 	}
 
-	let dark = false;
+	let darkTheme: boolean;
+	$: darkTheme = $theme === 'dark';
 </script>
 
 <button on:click={toggleTheme}>
-	{#if dark}
+	{#if darkTheme}
 		<svg class="toggle-icon" aria-label="Apply dark theme" fill="currentColor" viewBox="0 0 20 20"
 			><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" /></svg
 		>
