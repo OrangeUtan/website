@@ -43,7 +43,7 @@
 />
 
 {#each Object.entries(filteredCategories) as [category, hats] (category)}
-	<h1 class="text-2xl text-left pt-4 pb-4 ">
+	<h1 class="category-heading">
 		{category.trim().replace(/^\w/, (c) => c.toUpperCase())}
 	</h1>
 	<div class="grid gap-2 lg:grid-cols-8 md:grid-cols-5 grid-cols-3">
@@ -56,3 +56,10 @@
 		<Circle3 />
 	</div>
 {/each}
+
+<style lang="scss">
+	.category-heading {
+		@apply text-2xl text-left;
+		@apply pt-4 pb-4;
+	}
+</style>

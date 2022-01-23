@@ -7,18 +7,28 @@
 	<link rel="icon" type="image/x-icon" href="/i/favicon.png" />
 </svelte:head>
 
-<header class="bg-header text-on-header">
+<header>
 	<Nav />
 </header>
 
-<main class="p-8 max-w-6xl mx-auto bg-bg text-on-bg border-border transition-colors duration-theme">
+<main>
 	<slot />
 </main>
 
-<style>
+<style lang="scss">
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
+
+	header {
+		@apply bg-header text-on-header;
+	}
+
+	main {
+		@apply bg-bg text-on-bg;
+		@apply transition-colors duration-theme;
+		@apply p-8 max-w-6xl mx-auto border-border;
+	}
 
 	:global[data-theme='light'] {
 		--color-bg: #ffffff;
