@@ -29,6 +29,7 @@
 		"merge-stream": "^2.0.0",
 		"prettier": "^2.4.1",
 		"prettier-plugin-svelte": "^2.4.0",
+		"sass": "^1.49.0",
 		"svelte": "^3.44.0",
 		"svelte-check": "^2.2.6",
 		"svelte-loading-spinners": "^0.1.7",
