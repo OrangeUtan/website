@@ -11,7 +11,7 @@
 	<Nav />
 </header>
 
-<main class="p-8 max-w-6xl mx-auto bg-bg text-on-bg border-border">
+<main class="p-8 max-w-6xl mx-auto bg-bg text-on-bg border-border transition-colors duration-theme">
 	<slot />
 </main>
 
@@ -43,6 +43,9 @@
 	}
 
 	:global body {
+		@apply transition-colors duration-theme;
+		--duration-theme: 150ms;
+
 		background-color: var(--color-bg);
 		height: 100%;
 	}

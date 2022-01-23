@@ -11,6 +11,9 @@ module.exports = {
 			'on-card': 'var(--color-on-card)',
 			'border-card': 'var(--color-border-card)',
 			border: 'var(--color-border)'
+		},
+		transitionDuration: {
+			theme: 'var(--duration-theme)'
 		}
 	}
 };

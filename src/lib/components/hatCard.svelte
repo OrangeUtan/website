@@ -6,7 +6,7 @@
 </script>
 
 <a
-	class="bg-card text-on-card border border-border-card rounded-sm shadow-md hover:shadow-md flex flex-col items-center"
+	class="bg-card text-on-card border border-border-card rounded-sm shadow-md hover:shadow-md flex flex-col items-center transition-colors duration-theme"
 	href={`/hat/${hat.type}`}
 >
 	<i class={`hat-icon h-${hat.type} drop-shadow-md`} />
