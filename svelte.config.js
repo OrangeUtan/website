@@ -21,6 +21,9 @@ const config = {
 					$stores: path.resolve('./src/lib/stores'),
 					$actions: path.resolve('./src/actions')
 				}
+			},
+			ssr: {
+				noExternal: ['nanostores', '@nanostores/persistent']
 			}
 		}
 	}

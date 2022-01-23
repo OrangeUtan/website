@@ -13,7 +13,6 @@
 		"spritesheets": "gulp spritesheets"
 	},
 	"devDependencies": {
-		"@nanostores/persistent": "^0.5.1",
 		"@sveltejs/adapter-auto": "1.0.0-next.11",
 		"@sveltejs/adapter-netlify": "1.0.0-next.39",
 		"@sveltejs/kit": "1.0.0-next.232",
@@ -28,7 +27,6 @@
 		"gulp-imagemin": "^8.0.0",
 		"gulp.spritesmith": "^6.12.1",
 		"merge-stream": "^2.0.0",
-		"nanostores": "^0.5.8",
 		"prettier": "^2.4.1",
 		"prettier-plugin-svelte": "^2.4.0",
 		"sass": "^1.49.0",
@@ -41,5 +39,9 @@
 		"typescript": "^4.4.3",
 		"vinyl-buffer": "^1.0.1"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@nanostores/persistent": "^0.5.1",
+		"nanostores": "^0.5.8"
+	}
 }
