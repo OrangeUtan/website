@@ -1,0 +1,11 @@
+:global body {
+	@apply transition-colors duration-theme;
+
+	background-color: var(--color-bg);
+	height: 100%;
+}
+
+// Variables
+:global:root {
+	--duration-theme: 150ms;
+}

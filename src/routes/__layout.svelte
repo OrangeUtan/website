@@ -16,6 +16,9 @@
 </main>
 
 <style lang="scss">
+	@use 'src/styles/global';
+	@use 'src/styles/themes';
+
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
@@ -28,35 +31,5 @@
 		@apply bg-bg text-on-bg;
 		@apply transition-colors duration-theme;
 		@apply p-8 max-w-6xl mx-auto border-border;
-	}
-
-	:global[data-theme='light'] {
-		--color-bg: #ffffff;
-		--color-on-bg: #24292f;
-		--color-header: #24292f;
-		--color-on-header: #ffffff;
-		--color-card: var(--color-bg);
-		--color-on-card: var(--color-on-bg);
-		--color-border-card: #e0dddd;
-		--color-border: #373e47;
-	}
-
-	:global[data-theme='dark'] {
-		--color-bg: #22272e;
-		--color-on-bg: #b8c5d3;
-		--color-header: #2d333b;
-		--color-on-header: #c2cfdd;
-		--color-card: #2b3138;
-		--color-on-card: #c2cfdd;
-		--color-border-card: #383e49;
-		--color-border: #373e47;
-	}
-
-	:global body {
-		@apply transition-colors duration-theme;
-		--duration-theme: 150ms;
-
-		background-color: var(--color-bg);
-		height: 100%;
 	}
 </style>
