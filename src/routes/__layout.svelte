@@ -21,16 +21,25 @@
 	@tailwind utilities;
 
 	:global[data-theme='light'] {
-		--color-bg: #FFFFF;
-		--color-on-bg: #40454a;
+		--color-bg: #ffffff;
+		--color-on-bg: #b8c5d3;
+		--color-fg: var(--color-bg);
+		--color-on-fg: #c2cfdd;
+		--color-border: #373e47;
+		--color-border-fg: #e0dddd;
+		--color-header: #24292f;
+		--color-on-header: #ffffff;
 	}
 
 	:global[data-theme='dark'] {
 		--color-bg: #22272e;
 		--color-on-bg: #b8c5d3;
-		--color-header: #2d333b;
-		--color-on-header: #b8c5d3;
+		--color-fg: #2d333b;
+		--color-on-fg: #c2cfdd;
 		--color-border: #373e47;
+		--color-border-fg: #3c424e;
+		--color-header: var(--color-fg);
+		--color-on-header: var(--color-on-fg);
 	}
 
 	:global body {
