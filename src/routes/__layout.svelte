@@ -22,24 +22,24 @@
 
 	:global[data-theme='light'] {
 		--color-bg: #ffffff;
-		--color-on-bg: #b8c5d3;
-		--color-fg: var(--color-bg);
-		--color-on-fg: #c2cfdd;
-		--color-border: #373e47;
-		--color-border-fg: #e0dddd;
+		--color-on-bg: #24292f;
 		--color-header: #24292f;
 		--color-on-header: #ffffff;
+		--color-card: var(--color-bg);
+		--color-on-card: var(--color-on-bg);
+		--color-border-card: #e0dddd;
+		--color-border: #373e47;
 	}
 
 	:global[data-theme='dark'] {
 		--color-bg: #22272e;
 		--color-on-bg: #b8c5d3;
-		--color-fg: #2d333b;
-		--color-on-fg: #c2cfdd;
+		--color-header: #2d333b;
+		--color-on-header: #c2cfdd;
+		--color-card: #2b3138;
+		--color-on-card: #c2cfdd;
+		--color-border-card: #383e49;
 		--color-border: #373e47;
-		--color-border-fg: #3c424e;
-		--color-header: var(--color-fg);
-		--color-on-header: var(--color-on-fg);
 	}
 
 	:global body {
