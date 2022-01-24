@@ -19,7 +19,7 @@ const config = {
 					$lib: path.resolve('./src/lib'),
 					$components: path.resolve('./src/lib/components'),
 					$stores: path.resolve('./src/lib/stores'),
-					$actions: path.resolve('./src/actions')
+					$actions: path.resolve('./src/lib/actions')
 				}
 			},
 			ssr: {
