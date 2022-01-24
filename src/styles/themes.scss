@@ -25,7 +25,7 @@
 	--color-theme-toggle: #9ed5ef;
 
 	// Header
-	--color-header: #2d333b;
+	--color-header: #{lighten($color-bg, 5%)};
 	--color-on-header: #e9e9e9;
 
 	// Card
