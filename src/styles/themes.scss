@@ -1,24 +1,37 @@
+// Default/fallback theme
 :root {
-	// Default/fallback theme
-	--color-bg: #ffffff;
+	$color-bg: white;
+	--color-bg: #{$color-bg};
 	--color-on-bg: #24292f;
-	--color-header: #24292f;
-	--color-on-header: #ffffff;
-	--color-card: var(--color-bg);
-	--color-on-card: var(--color-on-bg);
-	--color-border-card: #ebebeb;
 	--color-border: #373e47;
 	--color-theme-toggle: #f5d67b;
+
+	// Header
+	--color-header: #24292f;
+	--color-on-header: #ffffff;
+
+	// Card
+	$color-card: $color-bg;
+	--color-card: #{$color-bg};
+	--color-on-card: var(--color-on-bg);
+	--color-card-title: #{darken($color-card, 5%)};
 }
 
 :global[data-theme='dark'] {
-	--color-bg: #22272e;
+	$color-bg: #22272e;
+	--color-bg: #{$color-bg};
 	--color-on-bg: #f3f3f3;
-	--color-header: #2d333b;
-	--color-on-header: #e9e9e9;
-	--color-card: #2b3138;
-	--color-on-card: #bebebe;
-	--color-border-card: #373f47;
 	--color-border: #373e47;
 	--color-theme-toggle: #9ed5ef;
+
+	// Header
+	--color-header: #2d333b;
+	--color-on-header: #e9e9e9;
+
+	// Card
+	// $color-card: #2a2f36;
+	$color-card: lighten($color-bg, 5%);
+	--color-card: #{$color-card};
+	--color-on-card: #bebebe;
+	--color-card-title: #{lighten($color-card, 5%)};
 }

@@ -46,7 +46,7 @@
 	<h1 class="category-heading">
 		{category.trim().replace(/^\w/, (c) => c.toUpperCase())}
 	</h1>
-	<div class="grid gap-2 lg:grid-cols-8 md:grid-cols-5 grid-cols-3">
+	<div class="grid gap-2 lg:grid-cols-8 md:grid-cols-5 grid-cols-3 items-start">
 		{#each hats as hat (hat.type)}
 			<HatCard {hat} />
 		{/each}

@@ -9,7 +9,7 @@ module.exports = {
 			'on-header': 'var(--color-on-header)',
 			card: 'var(--color-card)',
 			'on-card': 'var(--color-on-card)',
-			'border-card': 'var(--color-border-card)',
+			'card-title': 'var(--color-card-title)',
 			border: 'var(--color-border)',
 			'theme-toggle': 'var(--color-theme-toggle)'
 		},

@@ -7,7 +7,7 @@
 
 <a class="card" href={`/hat/${hat.type}`}>
 	<i class={`hat-icon h-${hat.type} drop-shadow-md`} />
-	<div class="bg-gray-100 w-full text-center flex-grow">
+	<div class="card-title">
 		<p>{$language[hat.name]}</p>
 	</div>
 </a>
@@ -19,7 +19,7 @@
 
 	.card {
 		@apply bg-card text-on-card;
-		@apply border border-border-card rounded;
+		@apply rounded;
 		@apply flex flex-col items-center;
 		@apply transition-colors duration-theme;
 
@@ -29,5 +29,9 @@
 		&:hover {
 			@apply shadow-md;
 		}
+	}
+
+	.card-title {
+		@apply w-full text-center rounded-b bg-card-title;
 	}
 </style>
