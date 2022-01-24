@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ThemeToggle from '$components/ThemeToggle.svelte';
+	import LanguageSwitcher from './LanguageSwitcher.svelte';
 </script>
 
 <nav>
@@ -8,6 +9,7 @@
 		Hats
 	</a>
 	<div class="right">
+		<LanguageSwitcher />
 		<ThemeToggle />
 	</div>
 </nav>
@@ -19,7 +21,7 @@
 		@apply shadow-md;
 
 		.right {
-			@apply flex gap-5;
+			@apply flex gap-2;
 			@apply text-center;
 		}
 	}
