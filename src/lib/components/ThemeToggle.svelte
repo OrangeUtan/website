@@ -43,7 +43,7 @@
 		popperAction={tooltipContent}
 		popperOptions={{
 			placement: 'bottom',
-			modifiers: [{ name: 'offset', options: { offset: [0, 8] } }]
+			modifiers: [{ name: 'offset', options: { offset: [0, 4] } }]
 		}}>{switchThemeMsg}</Tooltip
 	>
 {/if}

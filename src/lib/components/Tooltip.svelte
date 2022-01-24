@@ -17,8 +17,9 @@
 
 <style lang="scss">
 	.tooltip {
-		background: black;
-		color: white;
+		@apply bg-tooltip text-on-tooltip;
+		@apply border border-solid border-border-tooltip shadow-md;
+
 		font-weight: bold;
 		padding: 4px 8px;
 		font-size: 13px;

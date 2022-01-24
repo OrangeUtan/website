@@ -14,7 +14,10 @@ module.exports = {
 				'border-card': 'var(--color-border-card)',
 				border: 'var(--color-border)',
 				'theme-toggle': 'var(--color-theme-toggle)',
-				code: 'var(--color-code)'
+				code: 'var(--color-code)',
+				tooltip: 'var(--color-tooltip)',
+				'on-tooltip': 'var(--color-on-tooltip)',
+				'border-tooltip': 'var(--color-border-tooltip)'
 			},
 			transitionDuration: {
 				theme: 'var(--duration-theme)'

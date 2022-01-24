@@ -19,13 +19,17 @@
 	--color-on-card: var(--color-on-bg);
 	--color-card-title: #{darken($color-card, 7%)};
 	--color-border-card: #{darken($color-card, 10%)};
+
+	// Tooltip
+	--color-tooltip: var(--color-bg);
+	--color-on-tooltip: var(--color-on-bg);
 }
 
 :global[data-theme='dark'] {
 	$color-bg: #22272e;
 	--color-bg: #{$color-bg};
 	--color-on-bg: #f3f3f3;
-	--color-border: #373e47;
+	--color-border: #424b55;
 	--color-theme-toggle: #9ed5ef;
 
 	// Code
@@ -42,4 +46,9 @@
 	--color-on-card: #bebebe;
 	--color-card-title: #{lighten($color-card, 5%)};
 	--color-border-card: #{lighten($color-card, 10%)};
+
+	// Tooltip
+	--color-tooltip: #{lighten($color-bg, 10%)};
+	--color-on-tooltip: var(--color-on-bg);
+	--color-border-tooltip: #424b55;
 }
