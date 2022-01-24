@@ -6,6 +6,9 @@
 	--color-border: #373e47;
 	--color-theme-toggle: #f5d67b;
 
+	// Code
+	--color-code: #{darken($color-bg, 2%)};
+
 	// Header
 	--color-header: #24292f;
 	--color-on-header: #ffffff;
@@ -14,7 +17,7 @@
 	$color-card: $color-bg;
 	--color-card: #{$color-bg};
 	--color-on-card: var(--color-on-bg);
-	--color-card-title: #{darken($color-card, 5%)};
+	--color-card-title: #{darken($color-card, 7%)};
 }
 
 :global[data-theme='dark'] {
@@ -23,6 +26,9 @@
 	--color-on-bg: #f3f3f3;
 	--color-border: #373e47;
 	--color-theme-toggle: #9ed5ef;
+
+	// Code
+	--color-code: #{lighten($color-bg, 5%)};
 
 	// Header
 	--color-header: #{lighten($color-bg, 5%)};

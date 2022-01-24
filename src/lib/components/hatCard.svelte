@@ -3,6 +3,7 @@
 	import { language } from '../stores/language';
 	import { slide } from 'svelte/transition';
 	import { onMount } from 'svelte';
+	import CopyButton from './CopyButton.svelte';
 
 	function showDetails() {
 		areDetailsHidden = false;
@@ -41,21 +42,17 @@
 >
 	<i class={`hat-icon h-${hat.type} drop-shadow-md`} />
 	<div class="card-title">
-		<p>{$language[hat.name]}</p>
+		<h1 class="p-2">{$language[hat.name]}</h1>
 		{#if !areDetailsHidden}
 			<div class="card-details" in:slide={{ delay: 350, duration: 100 }} out:slide={{ duration: 100 }}>
-				<button on:click|preventDefault={() => console.log('hi')}>/give</button>
-				<button>{hat.cmd}</button>
+				<CopyButton text="/give" />
+				<CopyButton text={String(hat.cmd)} />
 			</div>
 		{/if}
 	</div>
 </a>
 
 <style lang="scss">
-	p {
-		padding: 0.5rem 1rem;
-	}
-
 	.card {
 		@apply rounded;
 		@apply bg-card text-on-card;
@@ -64,22 +61,10 @@
 
 		box-shadow: 0 0.18rem 0.06rem -0.12rem rgba(0, 0, 0, 0.2), 0 0.12rem 0.12rem 0 rgba(0, 0, 0, 0.14),
 			0 0.06rem 0.28rem 0 rgba(0, 0, 0, 0.12);
-
-		&:hover {
-			@apply shadow-md;
-		}
 	}
 
 	.card-title {
 		@apply w-full text-center rounded-b bg-card-title;
-	}
-
-	.card-details {
-		button {
-			@apply p-2 mb-2 text-sm w-5/6 rounded;
-			border: 1px solid #292d36;
-			background: #313742;
-		}
 	}
 
 	// :global* {
