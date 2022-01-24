@@ -15,6 +15,9 @@ module.exports = {
 		},
 		transitionDuration: {
 			theme: 'var(--duration-theme)'
+		},
+		borderRadius: {
+			DEFAULT: '.25rem'
 		}
 	}
 };
