@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :global body {
 	@apply transition-colors duration-theme;
 
@@ -8,4 +10,5 @@
 // Variables
 :global:root {
 	--duration-theme: 150ms;
+	font-family: 'Roboto', sans-serif;
 }

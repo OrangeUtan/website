@@ -2,10 +2,25 @@
 	import type { Hat } from '../stores/hats';
 	import { language } from '../stores/language';
 
+	function showDetails() {
+		areDetailsHidden = false;
+	}
+
+	function hideDetails() {
+		areDetailsHidden = true;
+	}
+
 	export let hat: Hat;
 </script>
 
-<a class="card" href={`/hat/${hat.type}`}>
+<a
+	class="card"
+	href={`/hat/${hat.type}`}
+	on:mouseover={showDetails}
+	on:focus={showDetails}
+	on:mouseleave={hideDetails}
+	on:blur={hideDetails}
+>
 	<i class={`hat-icon h-${hat.type} drop-shadow-md`} />
 	<div class="card-title">
 		<p>{$language[hat.name]}</p>
