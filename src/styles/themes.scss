@@ -18,6 +18,7 @@
 	--color-card: #{$color-bg};
 	--color-on-card: var(--color-on-bg);
 	--color-card-title: #{darken($color-card, 7%)};
+	--color-border-card: #{darken($color-card, 10%)};
 }
 
 :global[data-theme='dark'] {
@@ -40,4 +41,5 @@
 	--color-card: #{$color-card};
 	--color-on-card: #bebebe;
 	--color-card-title: #{lighten($color-card, 5%)};
+	--color-border-card: #{lighten($color-card, 10%)};
 }

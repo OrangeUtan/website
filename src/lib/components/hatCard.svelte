@@ -53,7 +53,7 @@
 
 <style lang="scss">
 	.card {
-		@apply rounded;
+		@apply border border-solid border-border-card rounded;
 		@apply bg-card text-on-card;
 		@apply flex flex-col items-center;
 		@apply transition-colors duration-theme;

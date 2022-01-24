@@ -11,6 +11,7 @@ module.exports = {
 				card: 'var(--color-card)',
 				'on-card': 'var(--color-on-card)',
 				'card-title': 'var(--color-card-title)',
+				'border-card': 'var(--color-border-card)',
 				border: 'var(--color-border)',
 				'theme-toggle': 'var(--color-theme-toggle)',
 				code: 'var(--color-code)'
