@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { Hat } from '../stores/hats';
 	import { language } from '../stores/language';
+	import { slide } from 'svelte/transition';
+	import { onMount } from 'svelte';
 
 	function showDetails() {
 		areDetailsHidden = false;
@@ -10,20 +12,42 @@
 		areDetailsHidden = true;
 	}
 
+	function onFocusout(e: FocusEvent) {
+		if (!cardEl.contains(e.relatedTarget as Node)) {
+			hideDetails();
+		}
+	}
+
 	export let hat: Hat;
+	let areDetailsHidden = true;
+	let cardEl: HTMLElement;
+
+	onMount(() => {
+		cardEl.addEventListener('focusout', onFocusout);
+
+		return () => {
+			cardEl.removeEventListener('focusout', onFocusout);
+		};
+	});
 </script>
 
 <a
-	class="card"
 	href={`/hat/${hat.type}`}
+	class="card"
 	on:mouseover={showDetails}
-	on:focus={showDetails}
 	on:mouseleave={hideDetails}
-	on:blur={hideDetails}
+	on:focus={showDetails}
+	bind:this={cardEl}
 >
 	<i class={`hat-icon h-${hat.type} drop-shadow-md`} />
 	<div class="card-title">
 		<p>{$language[hat.name]}</p>
+		{#if !areDetailsHidden}
+			<div class="card-details" in:slide={{ delay: 350, duration: 100 }} out:slide={{ duration: 100 }}>
+				<button on:click|preventDefault={() => console.log('hi')}>/give</button>
+				<button>{hat.cmd}</button>
+			</div>
+		{/if}
 	</div>
 </a>
 
@@ -33,8 +57,8 @@
 	}
 
 	.card {
-		@apply bg-card text-on-card;
 		@apply rounded;
+		@apply bg-card text-on-card;
 		@apply flex flex-col items-center;
 		@apply transition-colors duration-theme;
 
@@ -49,4 +73,16 @@
 	.card-title {
 		@apply w-full text-center rounded-b bg-card-title;
 	}
+
+	.card-details {
+		button {
+			@apply p-2 mb-2 text-sm w-5/6 rounded;
+			border: 1px solid #292d36;
+			background: #313742;
+		}
+	}
+
+	// :global* {
+	// 	outline: 1px solid yellow;
+	// }
 </style>
