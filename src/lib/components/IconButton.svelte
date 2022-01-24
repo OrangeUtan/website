@@ -4,7 +4,8 @@
 
 <style lang="scss">
 	button {
-		@apply relative p-2 w-10 h-10;
+		// WCAG 2.1: Minimal target size of 44x44 pixel
+		@apply relative p-2 w-11 h-11;
 
 		&::before {
 			@apply bg-white rounded-3xl opacity-0;
@@ -26,4 +27,8 @@
 			content: '';
 		}
 	}
+
+	// :global* {
+	// 	outline: 1px solid yellow;
+	// }
 </style>
