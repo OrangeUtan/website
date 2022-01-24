@@ -2,15 +2,9 @@
 	import { theme } from '$stores/theme';
 	import IconButton from '$components/IconButton.svelte';
 	import { createPopperActions } from 'svelte-popperjs';
-	import { fade } from 'svelte/transition';
-
-	let btn: IconButton;
+	import Tooltip from './Tooltip.svelte';
 
 	const [tooltipRef, tooltipContent] = createPopperActions();
-	const tooltipOptions = {
-		placement: 'bottom',
-		modifiers: [{ name: 'offset', options: { offset: [0, 8] } }]
-	};
 	let showTooltip = false;
 
 	function toggleTheme() {
@@ -27,7 +21,7 @@
 </script>
 
 <div use:tooltipRef on:mouseenter={() => (showTooltip = true)} on:mouseleave={() => (showTooltip = false)}>
-	<IconButton bind:this={btn} on:click={toggleTheme}>
+	<IconButton on:click={toggleTheme}>
 		{#if isDarkThemeActive}
 			<svg class="text-theme-toggle" aria-label="Apply dark theme" fill="currentColor" viewBox="0 0 20 20"
 				><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" /></svg
@@ -45,64 +39,16 @@
 </div>
 
 {#if showTooltip}
-	<div
-		class="tooltip"
-		role="tooltip"
-		use:tooltipContent={tooltipOptions}
-		data-popper-placement=""
-		transition:fade={{ duration: 100 }}
+	<Tooltip
+		popperAction={tooltipContent}
+		popperOptions={{
+			placement: 'bottom',
+			modifiers: [{ name: 'offset', options: { offset: [0, 8] } }]
+		}}>{switchThemeMsg}</Tooltip
 	>
-		{switchThemeMsg}
-		<div class="arrow" data-popper-arrow />
-	</div>
 {/if}
 
 <style lang="scss">
-	.tooltip {
-		background: black;
-		color: white;
-		font-weight: bold;
-		padding: 0.4rem 0.4rem;
-		font-size: 13px;
-		border-radius: 4px;
-		height: fit-content;
-		width: fit-content;
-	}
-
-	.arrow,
-	.arrow::before {
-		position: absolute;
-		width: 8px;
-		height: 8px;
-		background: inherit;
-	}
-
-	.arrow {
-		visibility: hidden;
-
-		&::before {
-			visibility: visible;
-			content: '';
-			transform: rotate(45deg);
-		}
-	}
-
-	:global(.tooltip[data-popper-placement^='top']) > .arrow {
-		bottom: -4px;
-	}
-
-	:global(.tooltip[data-popper-placement^='bottom']) > .arrow {
-		top: -4px;
-	}
-
-	:global(.tooltip[data-popper-placement^='left']) > .arrow {
-		right: -4px;
-	}
-
-	:global(.tooltip[data-popper-placement^='right']) > .arrow {
-		left: -4px;
-	}
-
 	// :global* {
 	// 	outline: 1px solid yellow;
 	// }
