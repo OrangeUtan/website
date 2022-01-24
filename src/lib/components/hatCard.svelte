@@ -44,9 +44,8 @@
 	<div class="card-title">
 		<h1 class="p-2">{$language[hat.name]}</h1>
 		{#if !areDetailsHidden}
-			<div class="card-details" in:slide={{ delay: 350, duration: 100 }} out:slide={{ duration: 100 }}>
-				<CopyButton text="/give" />
-				<CopyButton text={String(hat.cmd)} />
+			<div class="card-details" in:slide={{ delay: 300, duration: 100 }} out:slide={{ duration: 100 }}>
+				<CopyButton text="/give @s" />
 			</div>
 		{/if}
 	</div>

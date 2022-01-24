@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Nav from '$lib/components/nav.svelte';
+	import NavBar from '$components/NavBar.svelte';
 	import { theme } from '$stores/theme';
 	import { onMount } from 'svelte';
 
@@ -16,7 +16,7 @@
 </svelte:head>
 
 <header>
-	<Nav />
+	<NavBar />
 </header>
 
 <main>

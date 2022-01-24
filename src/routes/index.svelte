@@ -2,8 +2,8 @@
 	import { categories } from '$stores/hats';
 	import type { Hat } from '$stores/hats';
 	import { language } from '$stores/language';
-	import HatCard from '$components/hatCard.svelte';
 	import { Circle3 } from 'svelte-loading-spinners';
+	import HatCard from '$components/hatCard.svelte';
 
 	let searchTerm = '';
 	let filteredCategories = $categories;
