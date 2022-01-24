@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { theme } from '$stores/theme';
-	import IconButton from './IconButton.svelte';
+	import IconButton from '$components/IconButton.svelte';
 
 	function toggleTheme() {
 		const newTheme = $theme == 'dark' ? 'light' : 'dark';

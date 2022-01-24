@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ThemeToggleButton from './ThemeToggleButton.svelte';
+	import ThemeToggle from '$components/ThemeToggle.svelte';
 </script>
 
 <nav>
@@ -8,7 +8,7 @@
 		Hats
 	</a>
 	<div class="right">
-		<ThemeToggleButton />
+		<ThemeToggle />
 	</div>
 </nav>
 

@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { Hat } from '../stores/hats';
-	import { language } from '../stores/language';
+	import type { Hat } from '$stores/hats';
+	import { language } from '$stores/language';
 	import { slide } from 'svelte/transition';
 	import { onMount } from 'svelte';
-	import CopyButton from './CopyButton.svelte';
+	import CopyButton from '$components/CopyButton.svelte';
 
 	function showDetails() {
 		areDetailsHidden = false;
