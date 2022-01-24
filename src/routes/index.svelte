@@ -3,7 +3,7 @@
 	import type { Hat } from '$stores/hats';
 	import { language } from '$stores/language';
 	import { Circle3 } from 'svelte-loading-spinners';
-	import HatCard from '$components/hatCard.svelte';
+	import HatCardo from '$lib/components/HatCardo.svelte';
 
 	let searchTerm = '';
 	let filteredCategories = $categories;
@@ -48,7 +48,7 @@
 	</h1>
 	<div class="grid gap-2 lg:grid-cols-7 md:grid-cols-5 sm:grid-cols-3 grid-cols-2 items-start">
 		{#each hats as hat (hat.type)}
-			<HatCard {hat} />
+			<HatCardo {hat} />
 		{/each}
 	</div>
 {:else}

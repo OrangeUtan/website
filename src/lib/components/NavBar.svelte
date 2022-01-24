@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ThemeToggle from './themeToggle.svelte';
+	import ThemeToggleButton from './ThemeToggleButton.svelte';
 </script>
 
 <nav>
@@ -8,7 +8,7 @@
 		Hats
 	</a>
 	<div class="right">
-		<ThemeToggle />
+		<ThemeToggleButton />
 	</div>
 </nav>
 
@@ -23,4 +23,8 @@
 			@apply text-center;
 		}
 	}
+
+	// :global* {
+	// 	outline: 1px solid yellow;
+	// }
 </style>
