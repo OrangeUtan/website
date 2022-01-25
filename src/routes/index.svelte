@@ -35,13 +35,6 @@
 	<link rel="stylesheet" href="/i/hatIcons.css" />
 </svelte:head>
 
-<input
-	type="text"
-	placeholder="Filter"
-	class="w-full rounded-md text-lg p-4 border-2 border-gray-200"
-	bind:value={searchTerm}
-/>
-
 {#each Object.entries(filteredCategories) as [category, hats] (category)}
 	<h1 class="category-heading">
 		{category.trim().replace(/^\w/, (c) => c.toUpperCase())}
