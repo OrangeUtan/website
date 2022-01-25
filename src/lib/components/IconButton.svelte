@@ -1,4 +1,11 @@
-<button on:click>
+<script lang="ts">
+	import type { ActionList } from 'svelte-useactions';
+	import { useActions } from 'svelte-useactions';
+
+	export let use: ActionList<HTMLElement> = [];
+</script>
+
+<button on:click use:useActions={use} on:mouseenter on:mouseleave>
 	<slot />
 </button>
 
