@@ -4,6 +4,7 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
+				brand: 'var(--color-brand)',
 				bg: 'var(--color-bg)',
 				'on-bg': 'var(--color-on-bg)',
 				card: 'var(--color-card)',

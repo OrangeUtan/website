@@ -4,9 +4,9 @@
 </script>
 
 <nav>
-	<a href="/" class="text-xl">
+	<a href="/" class="text-xl flex items-center">
 		<img
-			class="inline-block align-text-top bg-orange-400 rounded-lg p-1"
+			class="inline-block align-text-top bg-brand rounded-lg p-1"
 			src="/i/favicon.png"
 			alt=""
 			width="35"

@@ -1,5 +1,7 @@
 // Default/fallback theme
 :root {
+	--color-brand: #fb923c;
+
 	$color-bg: white;
 	--color-bg: #{$color-bg};
 	--color-on-bg: #24292f;
@@ -22,6 +24,8 @@
 }
 
 :global[data-theme='dark'] {
+	--color-brand: #fb923c;
+
 	$color-bg: #22272e;
 	--color-bg: #{$color-bg};
 	--color-on-bg: #f3f3f3;
