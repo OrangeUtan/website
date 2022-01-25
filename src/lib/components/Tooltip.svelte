@@ -8,7 +8,7 @@
 	class="tooltip"
 	role="tooltip"
 	use:popperAction={popperOptions}
-	in:fade={{ duration: 100, delay: 300 }}
+	in:fade={{ duration: 100, delay: 400 }}
 	out:fade={{ duration: 100 }}
 >
 	<slot />
