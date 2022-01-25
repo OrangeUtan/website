@@ -15,11 +15,11 @@
 	<link rel="icon" type="image/x-icon" href="/i/favicon.png" />
 </svelte:head>
 
-<header class="flex justify-center">
+<header class="flex justify-center mx-4 my-4">
 	<NavBar />
 </header>
 
-<main>
+<main class="flex justify-center mx-4">
 	<slot />
 </main>
 

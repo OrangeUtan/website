@@ -22,8 +22,7 @@
 <style lang="scss">
 	nav {
 		@apply flex justify-between w-full;
-		@apply py-3 px-6;
-		@apply max-w-3xl;
+		@apply max-w-4xl;
 
 		.right {
 			@apply flex gap-2;

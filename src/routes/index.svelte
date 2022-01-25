@@ -2,8 +2,7 @@
 	import { categories } from '$stores/hats';
 	import type { Hat } from '$stores/hats';
 	import { language } from '$stores/language';
-	import { Circle3 } from 'svelte-loading-spinners';
-	import HatCard from '$components/HatCard.svelte';
+	import HatList from '$lib/components/HatList.svelte';
 
 	let searchTerm = '';
 	let filteredCategories = $categories;
@@ -35,24 +34,4 @@
 	<link rel="stylesheet" href="/i/hatIcons.css" />
 </svelte:head>
 
-{#each Object.entries(filteredCategories) as [category, hats] (category)}
-	<h1 class="category-heading">
-		{category.trim().replace(/^\w/, (c) => c.toUpperCase())}
-	</h1>
-	<div class="grid gap-2 lg:grid-cols-7 md:grid-cols-5 sm:grid-cols-3 grid-cols-2 items-start">
-		{#each hats as hat (hat.type)}
-			<HatCard {hat} />
-		{/each}
-	</div>
-{:else}
-	<div class="flex justify-center items-center p-8">
-		<Circle3 />
-	</div>
-{/each}
-
-<style lang="scss">
-	.category-heading {
-		@apply text-2xl text-left;
-		@apply pt-4 pb-4;
-	}
-</style>
+<HatList categories={filteredCategories} />
