@@ -5,8 +5,13 @@
 
 <nav>
 	<a href="/" class="text-xl">
-		<img class="inline-block align-text-top" src="/i/favicon.png" alt="" width="35" height="35" />
-		Hats
+		<img
+			class="inline-block align-text-top bg-orange-400 rounded-lg p-1"
+			src="/i/favicon.png"
+			alt=""
+			width="35"
+			height="35"
+		/>
 	</a>
 	<div class="right">
 		<LanguageSwitcher />
@@ -16,9 +21,9 @@
 
 <style lang="scss">
 	nav {
-		@apply flex justify-between align-middle;
-		@apply pt-3 pb-3 pr-6 pl-6;
-		@apply shadow-md;
+		@apply flex justify-between w-full;
+		@apply py-3 px-6;
+		@apply max-w-3xl;
 
 		.right {
 			@apply flex gap-2;

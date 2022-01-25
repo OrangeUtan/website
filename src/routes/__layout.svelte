@@ -15,7 +15,7 @@
 	<link rel="icon" type="image/x-icon" href="/i/favicon.png" />
 </svelte:head>
 
-<header>
+<header class="flex justify-center">
 	<NavBar />
 </header>
 
@@ -31,12 +31,11 @@
 	@tailwind components;
 	@tailwind utilities;
 
-	header {
-		@apply bg-header text-on-header;
+	:root {
+		@apply bg-bg text-on-bg;
 	}
 
 	main {
-		@apply bg-bg text-on-bg;
 		@apply transition-colors duration-theme;
 		@apply p-8 max-w-6xl mx-auto border-border;
 	}

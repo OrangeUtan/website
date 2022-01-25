@@ -9,10 +9,6 @@
 	// Code
 	--color-code: #{darken($color-bg, 2%)};
 
-	// Header
-	--color-header: #24292f;
-	--color-on-header: #ffffff;
-
 	// Card
 	$color-card: $color-bg;
 	--color-card: #{$color-bg};
@@ -34,10 +30,6 @@
 
 	// Code
 	--color-code: #{lighten($color-bg, 5%)};
-
-	// Header
-	--color-header: #{lighten($color-bg, 5%)};
-	--color-on-header: #e9e9e9;
 
 	// Card
 	// $color-card: #2a2f36;
