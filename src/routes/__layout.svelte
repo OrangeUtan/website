@@ -24,19 +24,22 @@
 </main>
 
 <style lang="scss">
-	@use 'src/styles/global';
 	@use 'src/styles/themes';
 
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
 
-	:root {
-		@apply bg-bg text-on-bg;
+	@font-face {
+		font-family: 'Roboto', sans-serif;
+		src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 	}
 
-	main {
+	:global body {
+		--duration-theme: 150ms;
+
+		@apply h-full;
+		@apply bg-bg text-on-bg border-border;
 		@apply transition-colors duration-theme;
-		@apply p-8 max-w-6xl mx-auto border-border;
 	}
 </style>
